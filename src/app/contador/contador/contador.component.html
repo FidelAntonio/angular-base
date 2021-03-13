@@ -1,0 +1,35 @@
+
+
+
+<h1>{{titulo}}</h1>
+
+
+<button (click)='numero = numero + 1' > + 1</button>
+
+<span>{{numero}}</span>
+
+<button (click)="numero = numero - 1" > - 1</button>
+
+<h2>Con funciones</h2>
+
+<button (click)="sumar()">+1</button>
+
+<span>{{funcion}}</span>
+
+<button (click)="restar()">-1</button>
+
+<h3>Funcion con parametro</h3>
+
+<button (click)="acumulador(+5)">+1</button>
+
+<span>{{acumulado}}</span>
+
+<button (click)="acumulador(-5)" >-1</button>
+
+<h4>Tarea sumar de 5 en 5 con una variable</h4>
+
+<button (click)="manual(+ cantidad)">+{{cantidad}}</button>
+
+<span>{{base}}</span>
+
+<button (click)="manual(- cantidad)" >-{{cantidad}}</button>

@@ -1,0 +1,40 @@
+<div *ngIf="heroes.length > 0; else elseTemplate">
+    <h3>Listado de heroes</h3>
+    <ul>
+        <li *ngFor="let heroe of heroes; let i = index ">
+    
+        {{i +1 }}  -  {{heroe}}
+        <button (click)="borrarHeroe(i)">Borrar</button>
+        </li>
+    </ul>
+</div>
+<ng-template #elseTemplate>
+    <h2>No quedan Heroes vivos </h2>
+</ng-template>
+
+<div *ngIf="heroesBorados.length > 0; else aunNohayEliminados">
+    <h3>Heroes eliminados </h3>
+    <ul>
+        <li *ngFor="let eliminado of heroesBorados; let i = index">
+            {{i +1 }}  {{eliminado}}
+            <button (click)="revivirHeroe(i)">Revivir</button>
+        </li>
+    </ul>
+</div>
+<ng-template #aunNohayEliminados>
+    <h2>No se ha eliminado a ninguno todavia</h2>
+</ng-template>
+
+<!-- mi solucion -->
+
+<!-- solucion de otro estudiante mas cool -->
+<!-- <ul>
+    <li *ngFor="let heroe of heroes; let i = index;">{{i + 1}} - {{heroe}} <button (click)="deleteHero(i)">Borrar
+            Heroe</button>
+    </li>
+</ul>
+
+<h3>Deleted Heroes</h3>
+<ul>
+    <li *ngFor="let deletedHeroe of deletedHeroes">{{deletedHeroe}}</li>
+</ul> -->
